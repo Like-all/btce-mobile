@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+    ul.nav.nav-pills
+        li
+            a(href='/') Pairs
+        li
+            a(href='/orders') Orders
+    h3.text-center Orders
+    !{ordersTable}

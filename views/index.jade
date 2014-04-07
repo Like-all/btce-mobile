@@ -1,0 +1,37 @@
+extends layout
+
+block content
+
+    ul.nav.nav-pills
+        li
+            a(href='/') Pairs
+        li
+            a(href='/orders') Orders
+
+    .col-md-8.col-md-offset-2
+        .col-xs-6
+            form(action="../sell")
+                h3.text-center#sell_currency #{sell_currency}
+                h2.text-center
+                    a#sell_amount(href="#", onclick="fillSellAmount()") #{sell_amount}
+                input.form-control#sell_amount_input(type="text", name="amount", placeholder="sell")
+                h3.text-center
+                    a#sell_price(href="#", onclick="fillSellPrice()") #{sell_price}
+                input.form-control#sell_price_input(type="text", name="price", placeholder="price")
+                != hidden
+                button.btn.btn-danger(type="submit", style="width: 100%") Sell
+        .col-xs-6
+            form(action="../buy")
+                h3.text-center#buy_currency #{buy_currency}
+                h2.text-center
+                    a#buy_amount(href="#", onclick="fillBuyAmount()") #{buy_amount}
+                input.form-control#buy_amount_input(type="text", name="amount", placeholder="buy")
+                h3.text-center
+                    a#buy_price(href="#", onclick="fillBuyPrice()") #{buy_price}
+                input.form-control#buy_price_input(type="text", name="price", placeholder="price")
+                != hidden
+                button.btn.btn-success(type="submit", style="width: 100%") Buy
+        h2.text-center
+            a(href="#", onclick="clearPrices()") clear
+    script(src="/javascripts/fillform.js")
+    script(src="/javascripts/update.js")

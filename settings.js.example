@@ -1,0 +1,41 @@
+var settings = {
+	'port': '3000'
+	'username': 'site_username',
+	'password': 'site_password',
+	'key': 'btc-e_api_key',
+	'secret': 'btc-e_api_secret',
+	'cert': 'path_to_cert.pem',
+	'privkey': 'path_to_cert.key'
+}
+
+exports.getPort = function() {
+	return settings.port;
+}
+
+exports.getUsername = function() {
+	return settings.username;
+}
+
+exports.getPassword = function() {
+	return settings.password;
+}
+
+exports.getKey = function() {
+	return settings.key;
+}
+
+exports.getSecret = function() {
+	return settings.secret;
+}
+
+exports.getWatchdog = function() {
+	return settings.watchdog;
+}
+
+exports.getCert = function() {
+	return settings.cert;
+}
+
+exports.getPrivkey = function() {
+	return settings.privkey;
+}
