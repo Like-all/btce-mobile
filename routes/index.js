@@ -3,7 +3,7 @@ var settings = require('../settings.js'),
 	https = require('https'),
 	fs = require('fs'),
 	crypto = require('crypto'),
-	btc_nonce = fs.readFileSync('/tmp/btcenonce', 'utf8');
+	btc_nonce = fs.readFileSync('/var/opt/btce-mobile/btcenonce', 'utf8');
 
 function BtceClient(key, secret) {
 	this.key = key;
@@ -14,7 +14,7 @@ BtceClient.prototype.query = function(args, callback) {
 	var client = this;
 	if (typeof args != 'object') args = {};
 	btc_nonce++;
-	fs.writeFileSync('/tmp/btcenonce', btc_nonce);
+	fs.writeFileSync('/var/opt/btce-mobile/btcenonce', btc_nonce);
 	args['nonce'] = btc_nonce;
 	var post = querystring.stringify(args);
 	var hmac = crypto.createHmac('sha512', client.secret);
