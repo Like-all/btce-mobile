@@ -49,3 +49,9 @@ sed -i 's|btc-e_api_key|'$btc_e_api_key'|' /opt/btce-mobile/settings.js
 echo "Type your BTCe api secret:"
 read btc_e_api_secret
 sed -i 's|btc-e_api_secret|'$btc_e_api_secret'|' /opt/btce-mobile/settings.js
+
+cd /opt/btce-mobile/public/javascripts/ && ln -s /tmp/btcestats.json
+
+if [[ $initsystems == 'init' ]]; then
+    service btce-mobile start
+fi
