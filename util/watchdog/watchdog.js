@@ -167,6 +167,6 @@ function checkTickers() {
 	when();
 }
 
-fs.writeFileSync("/tmp/btc-e-watchdog.pid", process.pid);
+fs.writeFileSync("/tmp/btce-watchdog.pid", process.pid);
 
 checkTickers();

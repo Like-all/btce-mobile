@@ -1,5 +1,5 @@
 #!/usr/bin/env/ bash
 
 while :; do
-    /usr/local/bin/node /home/buckstabu/dev/btc/watchdog.js
+    /usr/local/bin/node /opt/btce-mobile/util/watchdog/watchdog.js
 done
