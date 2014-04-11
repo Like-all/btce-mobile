@@ -42,7 +42,7 @@ echo "Type your password:"
 read -s site_password
 sed -i 's|site_password|'$site_password'|' /opt/btce-mobile/settings.js
 
-echo "Type your BTCe api key:"
+echo -e "\nPlease, open https://btc-e.com/profile#api_keys in browser and create API key.\n\nType your BTCe api key:"
 read btc_e_api_key
 sed -i 's|btc-e_api_key|'$btc_e_api_key'|' /opt/btce-mobile/settings.js
 
@@ -56,4 +56,4 @@ if [[ $initsystems == 'init' ]]; then
     service btce-mobile start
 fi
 
-echo -e "You can find nginx config examples in /opt/btce-mobile/util/nginx\nHave a nice day."
+echo -e "\nYou can find nginx config examples in /opt/btce-mobile/util/nginx\nHave a nice day."
