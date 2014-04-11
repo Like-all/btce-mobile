@@ -7,7 +7,6 @@ var settings = require('./settings.js')
 var routes = require('./routes');
 var http = require('http');
 var path = require('path');
-var everyauth = require('everyauth');
 var fs = require('fs');
 
 var app = express();
