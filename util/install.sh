@@ -55,3 +55,5 @@ cd /opt/btce-mobile/public/javascripts/ && ln -s /tmp/btcestats.json
 if [[ $initsystems == 'init' ]]; then
     service btce-mobile start
 fi
+
+echo -e "You can find nginx config examples in /opt/btce-mobile/util/nginx\nHave a nice day."
