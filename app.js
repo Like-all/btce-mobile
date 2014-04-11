@@ -38,7 +38,7 @@ app.get('/orders', routes.orders);
 app.get('/cancel', routes.cancel);
 
 
-fs.writeFileSync('/tmp/btc-e-mobile.pid', process.pid);
+fs.writeFileSync('/tmp/btce-mobile.pid', process.pid);
 
 http.createServer(app).listen(app.get('port'), 'localhost',function(){
   console.log('Express server listening on port ' + app.get('port'));
