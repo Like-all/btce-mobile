@@ -49,11 +49,3 @@ sed -i 's|btc-e_api_key|'$btc_e_api_key'|' /opt/btce-mobile/settings.js
 echo "Type your BTCe api secret:"
 read btc_e_api_secret
 sed -i 's|btc-e_api_secret|'$btc_e_api_secret'|' /opt/btce-mobile/settings.js
-
-echo "Type path to certificate:"
-read path_to_cert
-sed -i 's|path_to_cert.pem|'$path_to_cert'|' /opt/btce-mobile/settings.js
-
-echo "Type path to private key:"
-read path_to_privkey
-sed -i 's|path_to_cert.key|'$path_to_privkey'|' /opt/btce-mobile/settings.js
