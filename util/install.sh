@@ -56,4 +56,6 @@ if [[ $initsystems == 'init' ]]; then
     service btce-mobile start
 fi
 
+echo -e "\nIf you like btc-e mobile, please consider making a donation.\nBitcoin: 196mWnvQze7UX16SUwzBy4ppUMcPbgUTPH\nLitecoin: LaW4vgsVn9Vghu3SSwWTMhz6PWbusH3HaH\n"
+
 echo -e "\nYou can find nginx config examples in /opt/btce-mobile/util/nginx\nHave a nice day."
